@@ -14,11 +14,12 @@ class Admin extends Model
 
         try {
             $response = Http::retry(3, 100)->get(env('HOST_URL').'data');
-            $statusCode = $response->json()['status_code'];
 
-            if ($response->successful() && $statusCode === 500) {
+            if ($response->successful() && array_key_exists(0, $response->json())) {
                 Cache::put('fullData', $response->body());
                 $returnValue = $response->body();
+            } else {
+                $returnValue = Cache::get('fullData');
             }
 
         } catch (Throwable $e) {

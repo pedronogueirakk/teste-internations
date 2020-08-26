@@ -14,6 +14,5 @@ class AdminController extends Controller
     public function get() {
         $data = json_decode($this->admin->getData());
 
-        dd($data);
     }
 }
