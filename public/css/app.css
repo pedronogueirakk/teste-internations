@@ -17,3 +17,30 @@ header h1 {
   font-size: 24px;
 }
 
+aside {
+  display: inline-block;
+  width: 25%;
+  height: 100vh;
+  background: #fefefe;
+  padding: 15px;
+}
+
+aside h3,
+aside h4 {
+  margin: 0;
+  padding: 0;
+}
+
+aside h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+aside h4 {
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #cecece;
+}
+

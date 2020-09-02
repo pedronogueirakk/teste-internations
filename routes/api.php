@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/data', 'AdminController@get');
+Route::get('/data', 'ApiController@getData');

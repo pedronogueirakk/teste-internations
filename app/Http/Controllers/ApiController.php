@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class ApiController extends Controller
 {
-    public function __constructor(Admin $admin) {
+    public function __construct(Admin $admin) {
         $this->admin = $admin;
     }
 
